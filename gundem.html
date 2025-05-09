@@ -1,0 +1,33 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+	<title>Haberburada - Gündem Haberleri</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script type="module" crossorigin src="/assets/supabaseClient-C8U0DxkL.js"></script>
+  <script type="module" crossorigin src="/assets/main-BUKjjlze.js"></script>
+  <script type="module" crossorigin src="/assets/habercek-SVBXWeAN.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/style-CWkcitZL.css">
+</head>
+<body>
+    <header>
+        <p onclick="window.location.href=`/`" class="logo"></p>
+        <ul id="sayfalar">
+            <a href="/"><li>Anasayfa</li></a>
+            <a href="/gundem"><li>Gündem</li></a>
+            <a href="/ekonomi"><li>Ekonomİ</li></a>
+            <a href="/spor"><li>Spor</li></a>
+            <a href="/magazin"><li>Magazİn</li></a>
+        </ul>
+        <p id="sayfaGiris" onclick="window.location.href=`/giris`" class="giris"><i class="fa-solid fa-right-to-bracket"></i> &nbsp;Gİrİş Yap</p>
+        <p id="sayfaCikis" onclick="window.location.href=`/cikis`" class="cikis"><i class="fa-solid fa-power-off"></i> &nbsp;Çıkış Yap</p>
+    </header>
+    <div class="icerik">
+        <h1>GÜNDEM HABERLERİ</h1>
+        <div id="haberler" class="haberler"></div>
+    </div>
+    <footer>
+        <p><b>Armonika Dijital</b> için kodlanmıştır.</p>
+    </footer>
+</body>
+</html>

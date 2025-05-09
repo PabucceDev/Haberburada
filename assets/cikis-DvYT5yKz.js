@@ -1,0 +1,1 @@
+import{s}from"./supabaseClient-C8U0DxkL.js";window.onload=function(){o()};async function o(){await i()==!0?(await s.auth.signOut(),window.location.href="/giris"):window.location.href="/"}async function i(){return!!(await s.auth.getSession()).data.session}

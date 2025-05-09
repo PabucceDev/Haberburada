@@ -1,0 +1,33 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+	<title>Haberburada Admin</title>
+	<link rel="stylesheet" href="/src/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header admin>
+        <p onclick="window.location.href=`./haberler`" class="logo"></p>
+        <ul id="sayfalar">
+            <a href="./haberler"><li>Haberlerİ Yönet</li></a>
+            <a href="/"><li>Sİteye Dön</li></a>
+        </ul>
+        <p id="sayfaCikis" onclick="window.location.href=`/cikis`" class="cikis"><i class="fa-solid fa-power-off"></i> &nbsp;Çıkış Yap</p>
+    </header>
+    <div class="icerik">
+        <h1>Haber Düzenle</h1>
+        <div id="admin-icerik">
+            <div id="yenihaber" class="yenihaber">
+                <span id="errorBox"></span>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p><b>Armonika Dijital</b> için kodlanmıştır.</p>
+    </footer>
+	<script type="module" src="/src/haber-duzenle.ts"></script>
+    <script type="module" src="/src/admin.ts"></script>
+</body>
+</html>
+

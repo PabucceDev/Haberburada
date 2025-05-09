@@ -1,0 +1,32 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+	<title>Haberburada - Ekonomi Haberleri</title>
+	<link rel="stylesheet" href="/src/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <p onclick="window.location.href=`/`" class="logo"></p>
+        <ul id="sayfalar">
+            <a href="/"><li>Anasayfa</li></a>
+            <a href="/gundem"><li>Gündem</li></a>
+            <a href="/ekonomi"><li>Ekonomİ</li></a>
+            <a href="/spor"><li>Spor</li></a>
+            <a href="/magazin"><li>Magazİn</li></a>
+        </ul>
+        <p id="sayfaGiris" onclick="window.location.href=`/giris`" class="giris"><i class="fa-solid fa-right-to-bracket"></i> &nbsp;Gİrİş Yap</p>
+        <p id="sayfaCikis" onclick="window.location.href=`/cikis`" class="cikis"><i class="fa-solid fa-power-off"></i> &nbsp;Çıkış Yap</p>
+    </header>
+    <div class="icerik">
+        <h1>EKONOMİ HABERLERİ</h1>
+        <div id="haberler" class="haberler"></div>
+    </div>
+    <footer>
+        <p><b>Armonika Dijital</b> için kodlanmıştır.</p>
+    </footer>
+	<script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/habercek.ts"></script>
+</body>
+</html>

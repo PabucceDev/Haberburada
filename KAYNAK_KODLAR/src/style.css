@@ -1,0 +1,551 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin:0px;
+    padding:0px;
+}
+::selection{
+    background-color:#66B2FF;
+    color:white;
+}
+::-webkit-scrollbar{
+    width:7px
+}
+::-webkit-scrollbar-thumb{
+    background-color:#66AEDD;
+}
+::-webkit-scrollbar-thumb:hover{
+    box-shadow:0 0 30px 0 #000;
+}
+body, html{
+    display:flex;
+    flex-direction:column;
+    height:100%;
+}
+body{
+    background-color:#e4e4e4;
+    color:black;
+    font-family:sans-serif;
+}
+header{
+    background-color:#001f3d;
+    background-image: linear-gradient(to bottom right, #013263, #001f3d);
+    color:white;
+    user-select:none;
+    box-shadow:0px 0px 10px black;
+}
+.logo::before{
+    content:"Haberburada";
+    font-family: "Montserrat", sans-serif;
+    font-size:16pt;
+    font-weight:bold;
+    position:absolute;
+    top:1.25em;
+    left:3em;
+    cursor:pointer;
+}
+header ul{
+    list-style-type:none;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    height:5.1em;
+}
+header ul a{
+    color:white;
+    text-decoration:none;
+}
+header ul a li{
+    padding:1.85em 1.5em;
+    text-transform:uppercase;
+    font-weight:bold;
+    letter-spacing:2px;
+    opacity:0.7;
+    border-bottom:5px solid #001f3d;
+    text-shadow:0px 0px 0px;
+    transition:opacity 0.5s, border-bottom 0.5s, text-shadow 0.5s;
+}
+header ul a:hover li{
+    opacity:1;
+    border-bottom:5px solid #56CCF2;
+    text-shadow:0px 0px 7px #56CCF2;
+    transition:opacity 0.5s, border-bottom 0.5s, text-shadow 0.5s;
+}
+header .giris{
+    display:none;
+    position:absolute;
+    top:1em;
+    right:2em;
+    cursor:pointer;
+    font-family: "Montserrat", sans-serif;
+    font-size:12pt;
+    background-color:#007441;
+    padding:15px;
+    border-radius:5px;
+    text-transform:uppercase;
+    font-weight:bold;
+    outline:none;
+    transition:background-color 0.7s;
+}
+header .giris:hover{
+    background-color:#006338;
+    transition:background-color 0.7s;
+}
+header .cikis{
+    display:none;
+    position:absolute;
+    top:1em;
+    right:2em;
+    cursor:pointer;
+    font-family: "Montserrat", sans-serif;
+    font-size:12pt;
+    background-color:#850000;
+    padding:15px;
+    border-radius:5px;
+    text-transform:uppercase;
+    font-weight:bold;
+    outline:none;
+    transition:background-color 0.7s;
+}
+header .cikis:hover{
+    background-color:#740000;
+    transition:background-color 0.7s;
+}
+.icerik{
+    padding:20px 20px 50px 20px;
+    flex-grow:1;
+    font-family: "Montserrat", sans-serif;
+}
+.icerik .haberler{
+    margin-top:1.5em;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    gap:4em;
+    justify-content:center;
+}
+.icerik .haberler .haber-box{
+    position:relative;
+    border-radius:10px;
+    box-shadow:0px 0px 5px #8d8d8d;
+    user-select:none;
+    cursor:pointer;
+}
+.icerik .haberler .haber-box img{
+    width:500px;
+    height:500px;
+    border-radius:10px;
+}
+.icerik .haberler .haber-box h2{
+    position:absolute;
+    background-color:rgba(0, 0, 0, 0.7);
+    color:white;
+    font-weight:bold;
+    transform:translateY(-100%);
+    min-height:5em;
+    text-align:center;
+    padding:10px 20px;
+    box-sizing:border-box;
+    width:500px;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+}
+.icerik .haberler .haber-box p{
+    position:absolute;
+    top:1em;
+    left:1em;
+    background-color:rgba(0, 0, 0, 0.7);
+    color:white;
+    font-weight:bold;
+    text-transform:uppercase;
+    padding:10px;
+    border-radius:5px;
+}
+.icerik .girisForm{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:350px;
+    box-sizing:border-box;
+    padding:25px;
+    border-radius:5px;
+    background-color:#333333;
+    color:white;
+    user-select:none;
+}
+.icerik .girisForm h1{
+    margin-bottom:25px;
+}
+.icerik .girisForm input{
+    background-color:#e4e4e4;
+    padding:10px;
+    color:black;
+    font-family: "Montserrat", sans-serif;
+    border:1px solid white;
+    border-radius:5px;
+    outline:none;
+    font-size:14pt;
+    width:100%;
+    margin-bottom:15px;
+}
+.icerik .girisForm button{
+    cursor:pointer;
+    font-family: "Montserrat", sans-serif;
+    font-size:12pt;
+    padding:15px;
+    border:none;
+    border-radius:5px;
+    text-transform:uppercase;
+    font-weight:bold;
+    transition:background-color 0.7s;
+    color:white;
+    outline:none;
+    margin-top:10px;
+}
+.icerik .girisForm button#girisBtn{
+    background-color:#007441;
+    float:right;
+}
+.icerik .girisForm button#girisBtn:hover{
+    background-color:#006338;
+    transition:background-color 0.7s;
+}
+.icerik .girisForm button#cikisBtn{
+    background-color:#850000;
+    float:left;
+}
+.icerik .girisForm button#cikisBtn:hover{
+    background-color:#740000;
+    transition:background-color 0.7s;
+}
+.icerik .girisForm span{
+    background-color:#ad5050;
+    padding:10px;
+    display:none;
+    margin-bottom:25px;
+    font-weight:bold;
+    border-radius:5px;
+    text-align:center;
+}
+.icerik #haber-detay{
+    position:relative;
+    left:50%;
+    transform:translate(-50%, -2em);
+    padding:20px;
+    width:100%;
+    max-width:80em;
+}
+.icerik #haber-detay h1{
+    font-size:30pt;
+    margin:15px 0px;
+    word-wrap:break-word;
+}
+.icerik #haber-detay p{
+    font-size:15pt;
+}
+.icerik #haber-detay span{
+    display:block;
+    transform:translateY(-0.5em);
+    margin-bottom:10px;
+    font-weight:bold;
+}
+.icerik #geriBtn{
+    cursor:pointer;
+    font-family: "Montserrat", sans-serif;
+    font-size:12pt;
+    padding:15px;
+    border:none;
+    border-radius:5px;
+    text-transform:uppercase;
+    font-weight:bold;
+    color:white;
+    outline:none;
+    margin-top:10px;
+}
+.icerik #geriBtn{
+    background-color:rgba(0, 0, 0, 0.8);
+}
+header[admin]{
+    background-color:#3d0000;
+    background-image: linear-gradient(to bottom right, #630101, #3d0000);
+}
+header[admin] ul a li{
+    padding:1.85em 1.5em;
+    text-transform:uppercase;
+    font-weight:bold;
+    letter-spacing:2px;
+    opacity:0.7;
+    border-bottom:5px solid #3d0000;
+    text-shadow:0px 0px 0px;
+    transition:opacity 0.5s, border-bottom 0.5s, text-shadow 0.5s;
+}
+header[admin] ul a:hover li{
+    opacity:1;
+    border-bottom:5px solid #f25656;
+    text-shadow:0px 0px 7px #f25656;
+    transition:opacity 0.5s, border-bottom 0.5s, text-shadow 0.5s;
+}
+header[admin] .logo::before{
+    content: "Haberburada ADMIN";
+}
+.icerik #admin-icerik{
+    margin-top:1em;
+    font-size:13pt;
+}
+.icerik #admin-icerik button#haberEkle{
+    cursor:pointer;
+    font-family: "Montserrat", sans-serif;
+    font-size:12pt;
+    padding:15px;
+    border-radius:10px;
+    text-transform:uppercase;
+    font-weight:bold;
+    color:white;
+    outline:none;
+    border:none;
+    margin-bottom:20px;
+    background-color:#3d0000;
+}
+.icerik #admin-icerik table{
+    width:50em;
+    padding:10px;
+    font-size:15pt;
+    border-collapse:collapse;
+    width: 100%;
+}
+.icerik #admin-icerik table th,
+.icerik #admin-icerik table td{
+    padding:10px;
+}
+.icerik #admin-icerik table tr:nth-child(1) th:nth-child(1){
+    border-top-left-radius:10px;
+}
+.icerik #admin-icerik table tr:nth-child(1) th:last-child{
+    border-top-right-radius:10px;
+}
+.icerik #admin-icerik table th{
+    background-color:#3d0000;
+    color:white;
+    user-select:none;
+}
+.icerik #admin-icerik table tr.cift td{
+    background-color:#b9b9b9;
+    color:black;
+}
+.icerik #admin-icerik table tr.tek td{
+    background-color:#c9c8c8;
+    color:black;
+}
+.icerik #admin-icerik table .buttons{
+    display:flex;
+    gap:1em;
+    justify-content:center;
+}
+.icerik #admin-icerik table .buttons button{
+    width:50px;
+    height:50px;
+    background-color:#3d0000;
+    color:white;
+    outline:none;
+    border:none;
+    border-radius:50%;
+    font-size:12pt;
+    cursor:pointer;
+}
+.icerik #admin-icerik .yenihaber{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width:100%;
+    max-width:80em;
+}
+.icerik #admin-icerik .yenihaber select{
+    background-color: #f8f8f8;
+    border:1px solid black;
+    font-size:14pt;
+    font-family: "Montserrat", sans-serif;
+    padding:10px;
+    border-radius:5px;
+    min-width:22.5em;
+    margin-bottom:20px;
+    outline:none;
+}
+.icerik #admin-icerik .yenihaber input{
+    background-color: #f8f8f8;
+    border:1px solid black;
+    padding:10px;
+    font-size:14pt;
+    border-radius:5px;
+    outline:none;
+    width:100%;
+    margin-bottom:20px;
+    font-family: "Montserrat", sans-serif;
+}
+.icerik #admin-icerik .yenihaber textarea{
+    background-color:#f8f8f8;
+    font-size:14pt;
+    font-family: "Montserrat", sans-serif;
+    width:100%;
+    height:20em;
+    padding:15px 20px;
+    box-sizing:border-box;
+    border:1px solid black;
+    border-radius:5px;
+    resize:none;
+    outline:none;
+    margin-bottom:20px;
+}
+.icerik #admin-icerik .yenihaber button{
+    cursor:pointer;
+    font-family: "Montserrat", sans-serif;
+    font-size:12pt;
+    padding:15px;
+    border:none;
+    border-radius:5px;
+    text-transform:uppercase;
+    font-weight:bold;
+    transition:background-color 0.7s;
+    color:white;
+    outline:none;
+    margin-top:10px;
+}
+.icerik #admin-icerik .yenihaber button{
+    background-color:#007441;
+    float:right;
+}
+.icerik #admin-icerik .yenihaber button:hover{
+    background-color:#006338;
+    transition:background-color 0.7s;
+}
+.icerik #admin-icerik .yenihaber span{
+    background-color:#ad5050;
+    padding:10px;
+    display:none;
+    margin-bottom:25px;
+    font-weight:bold;
+    border-radius:5px;
+    text-align:center;
+    color:white;
+}
+footer{
+    background-color:#333333;
+    color:white;
+    padding:10px;
+    min-height:2em;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    font-size:14pt;
+    letter-spacing:1px;
+    user-select:none;
+    box-shadow:0px 0px 10px black;
+}
+
+@media only screen and (max-width:1100px){
+    header ul{
+        margin-top:3em;
+        flex-direction:column;
+        height:22em;
+        transform:translateY(-10%);
+    }
+    header ul a li{
+        width:7em;
+        padding:1em;
+        text-align:center;
+        border-bottom:1px solid #004d80!important;
+        font-size:10pt;
+    }
+    header ul a:hover li{
+        border-bottom:1px solid #004d80!important;
+    }
+    .logo::before{
+        font-size:16pt;
+        top:0.5em;
+        left:50%;
+        transform:translate(-50%, 0%);
+    }
+    header .giris{
+        position:relative;
+        width:100px;
+        left:50%;
+        transform:translate(-50%, -200%);
+        font-size:10pt;
+        padding:10px;
+    }
+    header .cikis{
+        position:relative;
+        width:100px;
+        left:50%;
+        transform:translate(-50%, -150%);
+        font-size:10pt;
+        padding:10px;
+    }
+    .icerik{
+        padding:20px 10px;
+        font-size:14px;
+    }
+    .icerik .haberler .haber-box img{
+        width:350px;
+        height:350px;
+    }
+    .icerik .haberler .haber-box h2{
+        width:350px;
+    }
+    .icerik #haber-detay{
+        transform:translate(-50%, -1em)!important;
+        width:auto;
+        max-width:600px;
+    }
+    .icerik #haber-detay h1{
+        text-align:center;
+    }
+    .icerik #haber-detay span{
+        text-align:center;
+    }
+    header[admin] ul{
+        margin-top:3em;
+        flex-direction:column;
+        height:17em;
+        transform:translateY(-10%);
+    }
+    header[admin] ul a li{
+        width:7em;
+        padding:1em;
+        text-align:center;
+        border-bottom:1px solid #800000!important;
+        font-size:10pt;
+    }
+    header[admin] ul a:hover li{
+        border-bottom:1px solid #800000!important;
+    }
+    header[admin] .cikis{
+        position:relative;
+        width:100px;
+        left:50%;
+        transform:translate(-50%, -150%);
+        font-size:10pt;
+        padding:10px;
+    }
+    header[admin] .logo::before{
+        font-size:14pt;
+        top:0.5em;
+        left:50%;
+        transform:translate(-50%, 0%);
+        text-align:center;
+    }
+    .icerik #admin-icerik{
+        width:100%;
+        overflow-x:auto;
+        -webkit-overflow-scrolling:touch;
+    }
+    .icerik #admin-icerik .yenihaber select{
+        width:100%;
+    }
+    footer{
+        font-size:12pt;
+    }
+}
