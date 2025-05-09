@@ -544,6 +544,7 @@ footer{
     }
     .icerik #admin-icerik .yenihaber select{
         width:100%;
+        min-width:100%!important;
     }
     footer{
         font-size:12pt;
