@@ -5,20 +5,17 @@ const sifreInput = document.getElementById("sifre") as HTMLInputElement;
 const girisBtn = document.getElementById("girisBtn") as HTMLButtonElement;
 const errorBox = document.getElementById("errorBox") as HTMLElement;
 
-window.onload = function() {
-    checkSession();
-};
+window.onload = async function () {
+    const oturum = await supabase.auth.getSession();
+    const oturumData = oturum.data.session;
 
-async function checkSession() {
-    const oturum = await sessionCheck();
-
-    if(oturum == true){
+    if(oturumData){
         window.location.href = "/";
     }
-}
+};
 
 document.addEventListener("keydown", (event) => {
-    if (event.key === "Enter"){
+    if(event.key === "Enter"){
         girisBtn.click();
     }
 });
@@ -51,14 +48,3 @@ girisBtn?.addEventListener("click", async () => {
         window.location.href = "/admin/haberler";
     }
 });
-
-async function sessionCheck(): Promise<boolean>{
-    const session = await supabase.auth.getSession();
-    const sessionData = session.data.session;
-
-    if(sessionData){
-        return true;
-    }
-
-    return false;
-}
